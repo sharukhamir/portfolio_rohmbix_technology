@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style>
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	#container{
+		width: 100%;
+		height: 200vh;
+		background-color: whitesmoke;
+	}
+	#main{
+		width: 800px;
+		height: 180vh;
+		background-color: white;
+		border: 10px solid white;
+		margin: auto;
+		position: relative;
+		top: 10px;
+	}
+	#border1{
+		width: 780px;
+		height: 168vh;
+		border: 1px solid black;
+		margin: auto;
+	}
+	#border2{
+		width: 770px;
+		height: 166vh;
+		border: 2px solid black;
+		margin: auto;
+		position: relative;
+		top: 3px;
+	}
+	#border3{
+		width: 760px;
+		height: 165vh;
+		border: 1px solid black;
+		margin: auto;
+		position: relative;
+		top: 2px;
+	}
+	#name_head{
+		position: relative;
+		top: 100px;
+		left: 50px;
+	}
+	#name{
+		border: none;
+		font-size: 40px;
+		color: darkblue;
+	}
+	#hrline{
+		width: 500px;
+		border-color: black;
+		position: relative;
+		top: 10px;
+	}
+	#profile{
+		width: 160px;
+		height: 180px;
+		position: relative;
+		top: 25px;
+		float: right;
+		right: 30px;
+	}
+	#address_head{
+		position: relative;
+		top: 125px;
+		left: 50px;
+	}
+	#address{
+		border: none;
+	}
+	#district{
+		border: none;
+	}
+	#phone{
+		border: none;
+	}
+	#email{
+		border: none;
+	}
+	#career_head{
+		color: darkblue;
+		position: relative;
+		top: 170px;
+		left: 50px;
+	}
+	#hrline3{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 90px;
+		left: 50px;
+	}
+	#career_text{
+		width: 660px;
+		height: 60px;
+		border: none;
+		position: relative;
+		top: 110px;
+		left: 50px;
+		font-size: 12px;
+	}
+	#education_head{
+		color: darkblue;
+		position: relative;
+		top: 110px;
+		left: 50px;
+	}
+	#hrline4{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 120px;
+		left: 50px;
+	}
+	#star1{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 110px;
+		left: 160px;
+	}
+	#education1{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 110px;
+		left: 170px;
+	}
+	#star2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 85px;
+		left: 160px;
+	}
+	#education2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 85px;
+		left: 170px;
+	}
+	#star3{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 60px;
+		left: 160px;
+	}
+	#education3{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 60px;
+		left: 170px;
+	}
+	#star4{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 35px;
+		left: 160px;
+	}
+	#education4{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 35px;
+		left: 170px;
+	}
+	#experience_head{
+		color: darkblue;
+		position: relative;
+		top: 55px;
+		left: 50px;
+	}
+	#hrline5{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 65px;
+		left: 50px;
+	}
+	#star5{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 55px;
+		left: 160px;
+	}
+	#experience1{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 55px;
+		left: 170px;
+	}
+	#star6{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 30px;
+		left: 160px;
+	}
+	#experience2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 30px;
+		left: 170px;
+	}
+	#star7{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 5px;
+		left: 160px;
+	}
+	#experience3{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 5px;
+		left: 170px;
+	}
+	#star8{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: -20px;
+		left: 160px;
+	}
+	#experience4{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: -20px;
+		left: 170px;
+	}
+	#personal_head{
+		color: darkblue;
+		position: relative;
+		left: 50px;
+	}
+	#hrline6{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 10px;
+		left: 50px;
+	}
+	#father{
+		color: black;
+		position: relative;
+		top:30px;
+		left: 160px;
+	}
+	#one{
+		font-size: 12px;
+		position: relative;
+		left: 70px;
+	}
+	#two{
+		font-size: 12px;
+		position: relative;
+		left: 108px;
+	}
+	#three{
+		font-size: 12px;
+		position: relative;
+		left: 91px;
+	}
+	#four{
+		font-size: 12px;
+		position: relative;
+		left: 78px;
+	}
+	#five{
+		font-size: 12px;
+		position: relative;
+		left: 73px;
+	}
+	#six{
+		font-size: 12px;
+		position: relative;
+		left: 93px;
+	}
+	#fname{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: -75px;
+		left: 400px;
+	}
+	#religion{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: -75px;
+		left: 400px;
+	}
+	#nationality{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: -75px;
+		left: 400px;
+	}
+	#dob{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: -75px;
+		left: 400px;
+	}
+	#status{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: -75px;
+		left: 400px;
+	}
+	#languages{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: -75px;
+		left: 400px;
+	}
+	#btn{
+		width: 80px;
+		height: 30px;
+		background-color: darkblue;
+		color: white;
+		border-color: wheat;
+		border: 3px solid wheat;
+		font-size: 15px;
+		position: relative;
+		top: 20px;
+		left: 350px;
+	}
+
+
+	#container2{
+		width: 100%;
+		height: 200vh;
+		background-color: whitesmoke;
+	}
+	#main2{
+		width: 800px;
+		height: 180vh;
+		background-color: white;
+		border: 10px solid white;
+		margin: auto;
+		position: relative;
+		top: 10px;
+	}
+	#border1_2{
+		width: 780px;
+		height: 168vh;
+		border: 1px solid black;
+		margin: auto;
+	}
+	#border2_2{
+		width: 770px;
+		height: 166vh;
+		border: 2px solid black;
+		margin: auto;
+		position: relative;
+		top: 3px;
+	}
+	#border3_2{
+		width: 760px;
+		height: 165vh;
+		border: 1px solid black;
+		margin: auto;
+		position: relative;
+		top: 2px;
+	}
+	#name_head2{
+		position: relative;
+		top: 100px;
+		left: 50px;
+	}
+	#name2{
+		border: none;
+		font-size: 40px;
+		color: darkblue;
+	}
+	#hrline_2{
+		width: 500px;
+		border-color: black;
+		position: relative;
+		top: 10px;
+	}
+	#profile2{
+		width: 160px;
+		height: 180px;
+		position: relative;
+		top: 25px;
+		float: right;
+		right: 30px;
+	}
+	#address_head2{
+		position: relative;
+		top: 125px;
+		left: 50px;
+	}
+	#address2{
+		border: none;
+	}
+	#district2{
+		border: none;
+	}
+	#phone2{
+		border: none;
+	}
+	#email2{
+		border: none;
+	}
+	#hrline2_2{
+		width: 350px;
+		border-color: whitesmoke;
+		position: relative;
+		top: 150px;
+		left: 200px;
+	}
+	#career_head2{
+		color: darkblue;
+		position: relative;
+		top: 170px;
+		left: 50px;
+	}
+	#hrline3_2{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 90px;
+		left: 50px;
+	}
+	#career_text2{
+		width: 660px;
+		height: 60px;
+		border: none;
+		position: relative;
+		top: 110px;
+		left: 50px;
+		font-size: 12px;
+	}
+	#education_head2{
+		color: darkblue;
+		position: relative;
+		top: 125px;
+		left: 50px;
+	}
+	#hrline4_2{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 130px;
+		left: 50px;
+	}
+	#star1_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 120px;
+		left: 160px;
+	}
+	#education1_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 120px;
+		left: 170px;
+	}
+	#star2_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 95px;
+		left: 160px;
+	}
+	#education2_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 95px;
+		left: 170px;
+	}
+	#star3_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 70px;
+		left: 160px;
+	}
+	#education3_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 70px;
+		left: 170px;
+	}
+	#star4_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 45px;
+		left: 160px;
+	}
+	#education4_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: 45px;
+		left: 170px;
+	}
+	#experience_head2{
+		color: darkblue;
+		position: relative;
+		top: 25px;
+		left: -120px;
+		font-size: 20px;
+	}
+	#hrline5_2{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 30px;
+		left: -120px;
+	}
+	#star5_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: 20px;
+		left: -10px;
+	}
+	#experience1_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: -10px;
+		left: 10px;
+	}
+	#star6_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: -35px;
+		left: -10px;
+	}
+	#experience2_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: -65px;
+		left: 10px;
+	}
+	#star7_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: -90px;
+		left: -10px;
+	}
+	#experience3_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: -120px;
+		left: 10px;
+	}
+	#star8_2{
+		color: black;
+		font-size: 50px;
+		position: relative;
+		top: -145px;
+		left: -10px;
+	}
+	#experience4_2{
+		width: 500px;
+		height: 30px;
+		border: none;
+		font-size: 12px;
+		position: relative;
+		top: -175px;
+		left: 10px;
+	}
+	#personal_head2{
+		color: darkblue;
+		position: relative;
+		left: 50px;
+		position: relative;
+		top: 215px;
+	}
+	#hrline6_2{
+		width: 660px;
+		border-color: black;
+		position: relative;
+		top: 220px;
+		left: 50px;
+	}
+	#father2{
+		color: black;
+		position: relative;
+		top: 240px;
+		left: 160px;
+	}
+	#religion2{
+		color: black;
+		position: relative;
+		top: 240px;
+		left: 160px;
+	}
+	#nationality2{
+		color: black;
+		position: relative;
+		top: 240px;
+		left: 160px;
+	}
+	#dob2{
+		color: black;
+		position: relative;
+		top: 240px;
+		left: 160px;
+	}
+	#status2{
+		color: black;
+		position: relative;
+		top: 240px;
+		left: 160px;
+	}
+	#languages2{
+		color: black;
+		position: relative;
+		top: 240px;
+		left: 160px;
+	}
+	#one2{
+		font-size: 12px;
+		position: relative;
+		top: 240px;
+		left: 70px;
+	}
+	#two2{
+		font-size: 12px;
+		position: relative;
+		top: 240px;
+		left: 108px;
+	}
+	#three2{
+		font-size: 12px;
+		position: relative;
+		top: 240px;
+		left: 91px;
+	}
+	#four2{
+		font-size: 12px;
+		position: relative;
+		top: 240px;
+		left: 78px;
+	}
+	#five2{
+		font-size: 12px;
+		position: relative;
+		top: 240px;
+		left: 73px;
+	}
+	#six2{
+		font-size: 12px;
+		position: relative;
+		top: 240px;
+		left: 93px;
+	}
+	#fname2_3{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: 130px;
+		left: 400px;
+	}
+	#religion2_3{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: 130px;
+		left: 400px;
+	}
+	#nationality2_3{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: 130px;
+		left: 400px;
+	}
+	#dob2_3{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: 130px;
+		left: 400px;
+	}
+	#status2_3{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: 130px;
+		left: 400px;
+	}
+	#languages2_3{
+		width: 200px;
+		height: 15px;
+		border: none;
+		position: relative;
+		top: 130px;
+		left: 400px;
+	}
+	#btn2{
+		width: 80px;
+		height: 30px;
+		background-color: darkblue;
+		color: white;
+		border-color: wheat;
+		border: 3px solid wheat;
+		font-size: 15px;
+		position: relative;
+		top: 20px;
+		left: 600px;
+	}
+</style>
+<body>
+<div id="container" onclick="demo()">
+	<div id="main">
+		<div id="border1">
+			<div id="border2">
+				<div id="border3">
+					<div id="name_head">
+						<input type="text" placeholder="SHARUKH AMIR" id="name">
+						<hr id="hrline">
+					</div><!-- name_head -->
+					<img src="amir.jpg" id="profile">
+					<div id="address">
+						<b id="address_head">Address: <input type="text" placeholder="313 Hirabad Road" id="address"></b><br>
+						<b id="address_head">Ditrict: <input type="text" placeholder="Hyderabad, Sindh" id="district"></b><br>
+						<b id="address_head">Phone: <input type="text" placeholder="+923458937969" id="phone"></b><br>
+						<b id="address_head">Email: <input type="text" placeholder="sharukhamir05@gmail.com" id="email"></b>
+					</div><!-- address -->
+					<div id="career">
+						<h3 id="career_head">CAREER OBJECTIVE</h3><hr id="hrline3">
+						<textarea id="career_text" placeholder="Looking for a full time challenging position in reputable Organization having attractive environment, prospects of growth and learning, in line with educational qualification, skills, proficiency and experience."></textarea>
+					</div><!-- career -->
+					<div id="educaton">
+						<h3 id="education_head">EDUCTAION BACKGROUND</h3><hr id="hrline4">
+						<b id="star1">.</b><input type="text" placeholder="BS in Telecommunication from Sindh University in 2018." id="education1"><br>
+						<b id="star2">.</b><input type="text" placeholder="Intermediate from BISE Mirpurkhas in 2013." id="education2"><br>
+						<b id="star3">.</b><input type="text" placeholder="Matriculation from BISE Mirpurkhas in 2011." id="education3"><br>
+						<b id="star4">.</b><input type="text" placeholder="DIT Course from Politecnical Institute of Sanghar." id="education4">
+					</div><!-- education -->
+					<div id="experience">
+						<h3 id="experience_head">INTERNSHIP & EXPERIENCE</h3><hr id="hrline5">
+						<b id="star5">.</b><input type="text" placeholder="Installing and maintain of network components: LAN, MAN." id="experience1"><br>
+						<b id="star6">.</b><input type="text" placeholder="Experience as a Field Engineer at Gemnet Enterprise Solutions for 1.5 year." id="experience2"><br>
+						<b id="star7">.</b><input type="text" placeholder="Worked as a Field Engineer at Fiber Link Ltd from 3 years" id="experience3"><br>
+						<b id="star8">.</b><input type="text" placeholder="Internship in Warid Telecom as a Field Engineer for 1 Months" id="experience4">
+					</div><!-- experience -->
+					<div id="personal">
+						<h3 id="personal_head">PERSONAL INFORMATION</h3><hr id="hrline6">
+						<p id="father">Father's Name <span id="one">:</span></p>
+						<p id="father">Religion <span id="two">:</span></p>
+						<p id="father">Nationality <span id="three">:</span></p>
+						<p id="father">Date of Birth <span id="four">:</span></p>
+						<p id="father">Martial Status <span id="five">:</span></p>
+						<p id="father">Languages <span id="six">:</span></p>
+						<input type="text" id="fname" placeholder="Amir Ali"><br>
+						<input type="text" id="religion" placeholder="Muslim or Non-Muslim"><br>
+						<input type="text" id="nationality" placeholder="Pakistani"><br>
+						<input type="date" id="dob" placeholder="05-02-2001"><br>
+						<input type="text" id="status" placeholder="Bachelor or Married"><br>
+						<input type="text" id="languages" placeholder="English, Arabic or etc"><br>
+					</div><!-- personal -->
+				</div><!-- border3 -->
+			</div><!-- border2 -->
+		</div><!-- border1 -->
+		<input type="button" value="SUBMIT" id="btn" onclick="demo()">
+	</div><!-- main -->
+</div><!-- container -->
+
+
+<div id="container2" onclick="demo()">
+	<div id="main_2">
+		<div id="border1_2">
+			<div id="border2_2">
+				<div id="border3_2">
+					<div id="name_head2">
+						<b type="text" id="name2"></b>
+						<hr id="hrline_2">
+					</div><!-- name_head -->
+					<img src="amir.jpg" id="profile2">
+					<div id="address2">
+						<b id="address_head2">Address: <input type="text" id="address2"></b><br>
+						<b id="address_head2">Ditrict: <input type="text" id="district2"></b><br>
+						<b id="address_head2">Phone: <input type="text" id="phone2"></b><br>
+						<b id="address_head2">Email: <input type="text" id="email2"></b>
+					</div><!-- address -->
+					<div id="career2">
+						<h3 id="career_head2">CAREER OBJECTIVE</h3><hr id="hrline3_2">
+						<textarea id="career_text2"></textarea>
+					</div><!-- career2 -->
+					<div id="educaton2">
+						<h3 id="education_head2">EDUCTAION BACKGROUND</h3><hr id="hrline4_2">
+						<b id="star1_2">.</b><input type="text" id="education1_2"><br>
+						<b id="star2_2">.</b><input type="text" id="education2_2"><br>
+						<b id="star3_2">.</b><input type="text" id="education3_2"><br>
+						<b id="star4_2">.</b><input type="text" id="education4_2">
+					</div><!-- education2 -->
+					<div id="experience2">
+						<h3 id="experience_head2">INTERNSHIP & EXPERIENCE</h3><hr id="hrline5_2">
+						<b id="star5_2">.</b><input type="text" id="experience1_2"><br>
+						<b id="star6_2">.</b><input type="text" id="experience2_2"><br>
+						<b id="star7_2">.</b><input type="text" id="experience3_2"><br>
+						<b id="star8_2">.</b><input type="text" id="experience4_2">
+					</div><!-- experience2 -->
+					<div id="personal2">
+						<h3 id="personal_head2">PERSONAL INFORMATION</h3><hr id="hrline6_2">
+						<p id="father2">Father's Name <span id="one2">:</span></p>
+						<p id="religion2">Religion <span id="two2">:</span></p>
+						<p id="nationality2">Nationality <span id="three2">:</span></p>
+						<p id="dob2">Date of Birth <span id="four2">:</span></p>
+						<p id="status2">Martial Status <span id="five2">:</span></p>
+						<p id="languages2">Languages <span id="six2">:</span></p>
+						<input type="text" id="fname2_3"><br>
+						<input type="text" id="religion2_3"><br>
+						<input type="text" id="nationality2_3"><br>
+						<input type="date" id="dob2_3"><br>
+						<input type="text" id="status2_3"><br>
+						<input type="text" id="languages2_3"><br>
+					</div><!-- personal2 -->
+				</div><!-- border3_2 -->
+			</div><!-- border2_2 -->
+		</div><!-- border1_2 -->
+		<input type="button" value="Print" id="btn2" onclick="print_btn()">
+	</div><!-- main2 -->
+</div><!-- container2 -->
+</body>
+<script>
+	function demo(){
+		var a = document.getElementById('name').value;
+		document.getElementById('name2').innerHTML = a;
+
+		var b = document.getElementById('address').value;
+		document.getElementById('address2').innerHTML = b;
+
+		var c = document.getElementById('district').value;
+		document.getElementById('district2').innerHTML = c;
+
+		var d = document.getElementById('phone').value;
+		document.getElementById('phone2').innerHTML = d;
+
+		var e = document.getElementById('email').value;
+		document.getElementById('email2').innerHTML = e;
+
+		var f = document.getElementById('career_text').value;
+		document.getElementById('career_text2').innerHTML = f;
+
+		var g = document.getElementById('education1').value;
+		document.getElementById('education1_2').innerHTML = g;
+
+		var h = document.getElementById('education2').value;
+		document.getElementById('education2_2').innerHTML = h;
+
+		var i = document.getElementById('education3').value;
+		document.getElementById('education3_2').innerHTML = i;
+
+		var j = document.getElementById('education4').value;
+		document.getElementById('education4_2').innerHTML = j;
+
+		var k = document.getElementById('experience1').value;
+		document.getElementById('experience1_2').innerHTML = k;
+
+		var l = document.getElementById('experience2').value;
+		document.getElementById('experience2_2').innerHTML = l;
+
+		var m = document.getElementById('experience3').value;
+		document.getElementById('experience3_2').innerHTML= m;
+
+		var n = document.getElementById('experience4').value;
+		document.getElementById('experience4_2').innerHTML = n;
+
+		var o = document.getElementById('fname').value;
+		document.getElementById('fname2').innerHTML = o;
+
+		var p = document.getElementById('religion').value;
+		document.getElementById('religion2_3').innerHTML = p;
+
+		var q = document.getElementById('nationality').value;
+		document.getElementById('nationality2_3')innerHTML = q;
+
+		var r = document.getElementById('dob').value;
+		document.getElementById('dob2_3').innerHTML = r;
+
+		var s = document.getElementById('status').value;
+		document.getElementById('status2_3').innerHTML =s;
+
+		var t = document.getElementById('languages').value;
+		document.getElementById('languages2_3').innerHTML =
+	}
+</script>
+</html>

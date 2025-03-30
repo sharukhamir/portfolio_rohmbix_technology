@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	#container{
+		width: 100%;
+		height: 460vh;
+		background-color: white;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	#nav{
+		width: 100%;
+		height: 100px;
+		background-color: whitesmoke;
+	}
+	#head{
+		font-family: cursive;
+		position: relative;
+		top: 25px;
+		left: 200px;
+	}
+	#nav-bar li{
+		display: inline-flex;
+		cursor: pointer;
+		padding: 40px;
+		font-size: 22px;
+		position: relative;
+		bottom: 55px;
+		left: 420px;
+	}
+	#nav-bar2 a{
+		text-decoration: none;
+		color: black;
+		display: inline-flex;
+		padding: 2px;
+		font-size: 17px;
+		position: relative;
+		bottom: 150px;
+		float: right;
+		right: 35px;
+	}
+	#signin{
+		position: relative;
+		left: 22px;
+	}
+	.img_slider{
+		width: 100%;
+		height: 530px;
+		position: relative;
+		bottom: 130px;
+	}
+	#sofa4{
+		width: 300px;
+		height: 450px;
+		transform: scaleX(1);
+		transition: 2s;
+		position: relative;
+		bottom: 100px;
+		left: 300px;
+	}
+	#sofa4:hover{
+		transform: scale(1.1);
+	}
+	#sofa5{
+		width: 200px;
+		height: 240px;
+		transform: scaleX(1);
+		transition: 2s;
+		position: relative;
+		bottom: 205px;
+		left: 310px;	
+	}
+	#sofa5:hover{
+		transform: scale(1.1);
+	}
+	#sofa6{
+		width: 200px;
+		height: 240px;
+		transform: scaleX(1);
+		transition: 2s;
+		position: relative;
+		bottom: 205px;
+		left: 315px;	
+	}
+	#sofa6:hover{
+		transform: scale(1.1);
+	}
+	#sofa7{
+		width: 410px;
+		height: 200px;
+		transform: scaleX(1);
+		transition: 2s;
+		position: relative;
+		top: 25px;
+		right: 100px;	
+	}
+	#sofa7:hover{
+		transform: scale(1.1);
+	}
+	#light{
+		position: relative;
+		bottom: 145px;
+		left: 320px;
+		color: white;
+		font-size: 20px;
+	}
+	#shop{
+		cursor: pointer;
+		position: relative;
+		bottom: 170px;
+		left: 320px;
+	}
+	#shop a{
+		color: white;
+		text-decoration: none;
+	}
+	#product{
+		text-align: center;
+		position: relative;
+		bottom: 150px;
+	}
+	#nav-bar3 li{
+		display: inline-flex;
+		cursor: pointer;
+		padding: 40px;
+		font-size: 22px;
+		position: relative;
+		bottom: 160px;
+		left: 260px;
+	}
+	#nav-bar4 li{
+		display: inline-flex;
+		cursor: pointer;
+		position: relative;
+		bottom: 240px;
+		float: right;
+		right: 50px;
+	}
+	.tbl_img{
+		width: 250px;
+		height: 300px;
+		transform: scaleX(1);
+		transition: 2s;
+		padding: 30px;
+		position: relative;
+		bottom: 200px;
+		left: 250px;
+	}
+	.tbl_img:hover{
+		transform: scale(1.1);
+	}
+	.sofa_price{
+		position: relative;
+		bottom: 50px;
+		left: 80px;
+	}
+	#sofa_price1{
+		position: relative;
+		bottom: 190px;
+		left: 330px;
+	}
+	#sofa_price2{
+		position: relative;
+		bottom: 215px;
+		left: 670px;
+	}
+	#sofa_price3{
+		position: relative;
+		bottom: 240px;
+		float: right;
+		left: 800px;
+	}
+	.tbl_img2{
+		width: 250px;
+		height: 300px;
+		transform: scaleX(1);
+		transition: 2s;
+		padding: 30px;
+		position: relative;
+		bottom: 200px;
+		left: 250px;
+	}
+	.tbl_img2:hover{
+		transform: scale(1.1);
+	}
+	.sofa_price2{
+		position: relative;
+		bottom: 50px;
+		left: 80px;
+	}
+	#sofa_price1_2{
+		position: relative;
+		bottom: 190px;
+		left: 330px;
+	}
+	#sofa_price2_2{
+		position: relative;
+		bottom: 215px;
+		left: 660px;
+	}
+	#sofa_price3_2{
+		position: relative;
+		bottom: 240px;
+		float: right;
+		left: 790px;
+	}
+	#last_sofa{
+		width: 800px;
+		height: 250px;
+		margin: auto;
+		background-color: whitesmoke;
+		position: relative;
+		bottom: 130px;
+	}
+	#wooden_sofa{
+		width: 400px;
+		height: 250px;
+		transform: scaleX(1);
+		transition: 2s;
+		position: relative;
+		float: right;
+		bottom: 95px;
+	}
+	#wooden_sofa:hover{
+		transform: scale(1.1);
+	}
+	#wood{
+		font-family: cursive;
+		font-size: 25px;
+		position: relative;
+		top: 90px;
+		left: 90px;
+	}
+	#wood1{
+		position: relative;
+		top: 70px;
+		left: 90px;
+	}
+	#news1{
+		text-align: center;
+		position: relative;
+		bottom: 60px;
+		left: 330px;
+	}
+	#news2{
+		text-align: center;
+		position: relative;
+		bottom: 120px;
+		left: 625px;
+	}
+	#txtarea{
+		width: 500px;
+		height: 60px;
+		text-align: center;
+		background-color: whitesmoke;
+		position: relative;
+		bottom: 40px;
+		left: 320px;
+	}
+	#send_btn{
+		width: 70px;
+		height: 62px;
+		border-color: silver;
+		position: relative;
+		bottom: 65px;
+		left: 315px;
+	}
+	#botm{
+		width: 100%;
+		height: 300px;
+		background-color: whitesmoke;
+	}
+	#bottomtext{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		top: 40px;
+		left: 150px;
+	}
+	#bottomtextcomfort{
+		text-align: center;
+		font-family: cursive;
+		font-size: 20px;
+	}
+	#bottomtext2{
+		text-align: center;
+	}
+	#bottomtextpolicy{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		bottom: 160px;
+		left: 460px;	
+	}
+	#bottomtextpolicies{
+		text-align: center;
+		font-size: 20px;
+
+	}
+	.policy{
+		position: relative;
+		left: 50px;
+	}
+	#bottomtextabout1{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		bottom: 360px;
+		left: 750px;	
+	}
+	#bottomtextabout2{
+		text-align: center;
+		font-size: 20px;
+
+	}
+	.about{
+		position: relative;
+		left: 50px;
+	}
+	#bottomtextfollow{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		bottom: 560px;
+		left: 1000px;	
+	}
+	#bottomtextfollowus{
+		text-align: center;
+		font-size: 20px;
+
+	}
+	.follow{
+		position: relative;
+		left: 50px;
+	}
+	#fb_img{
+		width: 20px;
+	}
+	#twiter_img{
+		width: 20px;
+	}
+</style>
+<body>
+<div id="container">
+	<div id="nav">
+		<h2 id="head">Comfort</h2>
+		<ul id="nav-bar">
+			<li class="nav-link">Home</li>
+			<li class="nav-link">Shop</li>
+			<li class="nav-link">About</li>
+		</ul>
+		<ul id="nav-bar2">
+			<a href="">SIGNUP</a><br>
+			<a href="" id="signin">SIGNIN</a>
+		</ul>
+	</div><!-- nav -->
+	<div>
+		<img src="images/sofa1.jpg" class="img_slider" id="slider">
+	</div>
+	<div>
+		<img src="images/sofa4.jpg" id="sofa4">
+		<img src="images/sofa5.jpg" id="sofa5">
+		<img src="images/sofa6.jpg" id="sofa6">
+		<img src="images/sofa7.jpg" id="sofa7">
+		<p id="light">Minimal Light</p>
+		<p id="shop"><a href="">Shop Now</a></p>
+	</div><!-- sofaimages -->
+	<div>
+		<h3 id="product">Our Product</h3>
+		<ul id="nav-bar3">
+			<li class="nav-link">All Product</li>
+			<li class="nav-link">Sofa</li>
+			<li class="nav-link">Decoration</li>
+		</ul>
+		<ul id="nav-bar4">
+			<li class="nav-link">></li>
+			<li class="nav-link">1 </li>
+			<li class="nav-link"><</li>
+		</ul>
+	</div><!-- product -->
+	<table>
+		<tr>
+			<th>
+				<img src="images/sofa8.jpg" class="tbl_img">
+				<td class="sofa_price">Double Sofa</td>
+			</th>
+			<th>
+				<img src="images/sofa9.jpg" class="tbl_img">
+				<td class="sofa_price">Single Chair</td>
+			</th>
+			<th>
+				<img src="images/sofa10.jpg" class="tbl_img">
+				<td class="sofa_price">Single Chair</td>
+			</th>
+		</tr>
+		<tr>
+			<td id="sofa_price1">$87.46</td>
+		</tr>
+		<tr>
+			<td id="sofa_price2">$35.00</td>
+		</tr>
+		<tr>
+			<td id="sofa_price3">$57.25</td>
+		</tr>
+	</table><!-- table1 -->
+	<table>
+		<tr>
+			<th>
+				<img src="images/sofa11.jpg" class="tbl_img2">
+				<td class="sofa_price2">Single Sofa</td>
+			</th>
+			<th>
+				<img src="images/sofa12.jpg" class="tbl_img2">
+				<td class="sofa_price2">Single Chair</td>
+			</th>
+			<th>
+				<img src="images/sofa13.jpg" class="tbl_img2">
+				<td class="sofa_price2">Single Sofa</td>
+			</th>
+		</tr>
+		<tr>
+			<td id="sofa_price1_2">$22.96</td>
+		</tr>
+		<tr>
+			<td id="sofa_price2_2">$62.40</td>
+		</tr>
+		<tr>
+			<td id="sofa_price3_2">$50.22</td>
+		</tr>
+	</table><!-- table2 -->
+	<div id="last_sofa">
+		<p id="wood">Wooden Sofa</p>
+		<p id="wood1">Highly Decorated</p>
+		<img src="images/sofa15.jpg" id="wooden_sofa">	
+	</div><!-- last_sofa -->
+	<div id="news">
+		<p id="news1">Subscribe To Our</p>
+		<b id="news2">Newslatter</b>
+		<textarea id="txtarea" placeholder="Give Your Feedback"></textarea>
+		<button id="send_btn">Send</button>
+	</div>
+	<div id="botm">
+		<div id="bottomtext">
+			<p id="bottomtextcomfort">Comfort</p>
+			<p id="bottomtext2">Comfort is one the recognized online brand of 
+			funrinture in hyderabad city. We also deliver our product to other cities.</p>
+		</div><!-- bottomtext -->
+		<div id="bottomtextpolicy">
+			<p id="bottomtextpolicies">OUR POLICIES</p>
+			<p class="policy">FAQ</p>
+			<p class="policy">Privacy Policy</p>
+			<p class="policy">Cookie Policy</p>
+			<p class="policy">Terms & Conditions</p>
+		</div>
+		<div id="bottomtextabout1">
+			<p id="bottomtextabout2">ABOUT US</p>
+			<p class="about">Our Company</p>
+			<p class="about">Our History</p>
+			<p class="about">Conatct</p>
+			<p class="about">Journal</p>
+		</div>
+		<div id="bottomtextfollow">
+			<p id="bottomtextfollowus">FOLLOW US</p>
+			<p class="follow"><a href="https://www.facebook.com/sharukh.ameer.9"><img src="images/facebook.png" id="fb_img"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/SharukhAmeer?t=OoAVZLCA9hC2uFw-Oss4UA&s=09"><img src="images/twiter_web.png" id="twiter_img"></a></p>
+		</div><!icon>
+	</div><!-- bottom -->
+</div><!-- container -->
+</body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+	setInterval(side, 1000);
+	var a = 0;
+	function side(){
+		a++
+		if(a == 3){
+			document.getElementById('slider').src='images/sofa2.jpg';
+		}
+		else if(a == 6){
+			document.getElementById('slider').src='images/sofa3.jpg';
+		}
+		else if(a == 9){
+			document.getElementById('slider').src='images/sofa1.jpg';
+			a=0;
+		}
+	}
+</script>
+</html>
